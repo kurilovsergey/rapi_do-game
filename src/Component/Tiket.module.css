@@ -1,0 +1,155 @@
+@import url(http://allfont.ru/allfont.css?fonts=roboto-regular);
+
+.ticket{
+    background: linear-gradient(180deg, #4568DC 0%, #B06AB3 100%), #EF8E48;
+    width: 320px;
+    height: 603px;
+    font-family: 'Roboto Regular', arial;
+    
+}
+
+.tab_content{
+    width: 296px;
+    height: 368px;
+    background-color: white;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+    padding-left: 11px;
+    
+}
+
+.numbertiket{
+    font-size: 16px;
+    
+    margin-top: 14px;
+        }
+
+.info{
+    margin-top: 14px; 
+    width: 200px;
+}       
+
+.fieldone{
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    
+
+}
+
+
+
+
+.fieldtwo{
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+}
+
+.description{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    
+}
+
+.numberlist{
+    margin-top: 8px;
+
+    
+}
+
+.lot{
+    background: #FFFFFF;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 5px;
+width: 40px;
+height: 40px;
+float: left;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+color: #000000;
+padding-top: 8px;
+
+}
+
+
+
+.lot:hover{
+    border: 2px solid #907cff;
+}
+
+.selectlot{
+background: #FFD205;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 5px;
+width: 40px;
+height: 40px;
+float: left;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+padding-top: 8px;
+}
+
+.selectlot:hover{
+    border: 2px solid #907cff;
+}
+
+.buttonresualt{
+    border: 1px solid #DDDDDD;
+    border-radius: 40px;
+    height: 43px;
+    width: 178px;
+    background-color: white;
+    margin-left: 59px;
+    margin-top: 23px;
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: normal;
+text-align: center;
+
+color: #000000;
+
+/* basic/black */
+
+}
+
+.buttonfalse{
+ border: 1px solid #DDDDDD;
+    border-radius: 40px;
+    height: 43px;
+    width: 178px;
+    background-color: white;
+    margin-left: 59px;
+    margin-top: 23px;
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: normal;
+text-align: center;
+
+color: grey;
+}
+
+.buttonresualt:hover{
+    border: 2px solid #907cff;
+}
