@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Tiket from './Component/Tiket'
 import Resault from './Component/Resault.js'
 import s from './Component/Tiket.module.css'
-
+import './App.css';
 
 const nineteen = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
 
@@ -15,10 +15,8 @@ class App extends Component {
     this.state = {selectnumber: [],
                   selectnumb: 0,
                   status: true,
-                  selectclass: s.selectlot,
-                  how: 0,
-                  valid: s.s 
-                  }
+                  resault: null
+                }
   }
 
  
@@ -69,20 +67,20 @@ onResault = () => {
 
     var rand = 1 - 0.5 + Math.random() * (2 - 1 + 1)
     rand = Math.round(rand);
-
-   
-    
-    console.log('random array ', array);
-    console.log('select array ', this.state.selectnumber);
-    console.log('random value ', rand);
-    console.log('select value ', this.state.selectnumb);
     
     var coincidence = this.state.selectnumber.filter(function(obj) { return array.indexOf(obj) == -1; });
-    console.log(coincidence);
-    if (coincidence.length<2) alert('!!!');
-    if ((coincidence.length==1 && this.state.selectnumber==rand) || coincidence.length==0) {alert('Pobeda'); console.log('pobeda!');};
-    } 
-}  
+    
+    console.log('Сгенерированный массив: ', array);
+    console.log('Выбранный массив: ', this.state.selectnumber);
+    console.log('Сгенерированное число: ', rand);
+    console.log('Выбранное число: ', this.state.selectnumb);
+    console.log(coincidence.length,' чисел не совпало');
+    
+    if ((coincidence.length==1 && this.state.selectnumber==rand) || coincidence.length==0) {this.setState({resault: true}) 
+      } else {this.setState({resault: false}); } 
+  
+} else {this.setState({resault: null});}
+} 
    
   onMagicWand = () =>{
     let array = this.randomarray([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
@@ -93,12 +91,12 @@ onResault = () => {
     this.setState({
       selectnumber: array
     },()=>
-      this.state.selectnumber.map(i  =>  document.getElementById(i).className = this.state.selectclass));
+      this.state.selectnumber.map(i  =>  document.getElementById(i).className = s.selectlot));
 
       var rand = 1 - 0.5 + Math.random() * (2 - 1 + 1)
       rand = Math.round(rand);
-      this.setState({selectnumb: rand},()=>document.getElementById(rand+19).className = this.state.selectclass);
-      //if (this.state.selectnumber.length=8) {this.setState({status: true})}
+      this.setState({selectnumb: rand},()=>document.getElementById(rand+19).className = s.selectlot);
+      
     }
    
    randomarray = (array) => {
@@ -137,8 +135,12 @@ onResault = () => {
 
     return (
       <div className="App">
-         <Tiket />
-         <Resault />
+         <Tiket onSelectNumberFieldOne={this.onSelectNumberFieldOne}
+          onSelectNumberFieldTwo={this.onSelectNumberFieldTwo}
+           onMagicWand={this.onMagicWand}
+           status={this.state.status}
+           onResault={this.onResault}/>
+         <Resault pobeda={this.state.resault} />
       </div>
     );
   }

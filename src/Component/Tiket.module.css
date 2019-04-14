@@ -1,10 +1,14 @@
 @import url(http://allfont.ru/allfont.css?fonts=roboto-regular);
 
+
+
+
 .ticket{
     background: linear-gradient(180deg, #4568DC 0%, #B06AB3 100%), #EF8E48;
     width: 320px;
     height: 603px;
     font-family: 'Roboto Regular', arial;
+    padding-top: 7px;
     
 }
 
@@ -17,13 +21,12 @@
     margin-right: auto;
     margin-top: 17px;
     padding-left: 11px;
-    
+    padding-top: 14px;
 }
 
 .numbertiket{
     font-size: 16px;
     
-    margin-top: 14px;
         }
 
 .info{
@@ -42,7 +45,15 @@
 }
 
 
+.magicwand{
+    float: right;
+    margin-right: 15px;
+}
 
+.magicwand:hover{
+    border: 1px solid #DDDDDD;
+
+}
 
 .fieldtwo{
     
@@ -63,8 +74,13 @@
 
 .numberlist{
     margin-top: 8px;
-
+    width: 300px;
+    height: 120px;
     
+}
+
+.numberlisttwo{
+    margin-top: 10px;
 }
 
 .lot{
@@ -152,4 +168,8 @@ color: grey;
 
 .buttonresualt:hover{
     border: 2px solid #907cff;
+}
+
+.answer{
+    margin-top: 10px;
 }
